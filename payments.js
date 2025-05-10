@@ -1,6 +1,9 @@
 const paidUsers = new Set();
 
-const markAsPaid = (chatId) => paidUsers.add(chatId);
-const hasPaid = (chatId) => paidUsers.has(chatId);
+const isPaid = (chatId) => paidUsers.has(chatId);
+const createPaymentSession = (chatId) => {
+  // This can be expanded to manage state; for now it’s a placeholder
+  console.log(`Created payment session for chatId: ${chatId}`);
+};
 
-module.exports = { markAsPaid, hasPaid };
+module.exports = { isPaid, createPaymentSession };
